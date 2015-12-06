@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+language: ruby
+rvm:
+  - 2.1.5
+
+install:
+  - bundle install
+script:
+  - bundle exec rake
+
