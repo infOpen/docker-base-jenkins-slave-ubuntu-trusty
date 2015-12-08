@@ -3,7 +3,8 @@ MAINTAINER Alexandre Chaussier <a.chaussier@infopen.pro>
 
 # Install base packages
 RUN apt-get update && \
-    apt-get install -y openjdk-7-jdk=7u91-2.6.3*
+    apt-get install -y openjdk-7-jdk=7u91-2.6.3* \
+                       git=1:1.9.1*
 
 # Create user for Jenkins
 RUN useradd -m \
