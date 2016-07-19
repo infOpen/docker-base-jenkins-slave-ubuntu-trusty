@@ -14,3 +14,8 @@ RUN useradd -m \
 # Set password for jenkins user
 RUN echo "jenkins:jenkins" | chpasswd
 
+# Locale management
+RUN locale-gen en_US.UTF-8
+RUN echo 'LC_ALL=en_US.UTF-8' > /etc/default/locale
+ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
